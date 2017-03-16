@@ -1,2 +1,6 @@
 gunicorn
-Flask
+flask_wtf
+wtforms
+forms
+flask_mail
+flask
