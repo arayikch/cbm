@@ -1,6 +1,5 @@
 gunicorn
 flask_wtf
 wtforms
-forms
 flask_mail
 flask
