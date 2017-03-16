@@ -1,37 +1,37 @@
 from flask import Flask, render_template, request, flash, redirect, url_for
 from forms import ContactForm
 from flask_mail import Message, Mail
-import config
+import apapppconfig
 
-app = Flask(__name__) 
+application = Flask(__name__) 
  
-app.config.from_object('config.DevelopmentConfig')
+application.config.from_object('appconfig.DevelopmentConfig')
 
 mail = Mail()
 
-mail.init_app(app)
+mail.init_app(application)
 
-@app.route('/')
+@application.route('/')
 def index():
 	return redirect(url_for('home'))
 
-@app.route('/home')
+@application.route('/home')
 def home():
 	return render_template('index.html', page='home')
 
-@app.route('/about')
+@application.route('/about')
 def about():
 	return render_template('about.html', page='about')
 
-@app.route('/portfolio')
+@application.route('/portfolio')
 def portfolio():
 	return render_template('portfolio.html', page='portfolio')
 
-@app.route('/services')
+@application.route('/services')
 def services():
 	return render_template('services.html', page='services')
 
-@app.route('/contact', methods=['GET', 'POST'])
+@application.route('/contact', methods=['GET', 'POST'])
 def contact():
     form = ContactForm()
     if request.method == 'POST':
@@ -39,7 +39,7 @@ def contact():
             flash('All fields are required.')
             return render_template('contact-us.html', form=form, page="contact")
         else:
-            msg = Message(form.subject.data, sender=config.MailData.FROM, recipients=config.MailData.TO)
+            msg = Message(form.subject.data, sender=appconfig.MailData.FROM, recipients=appconfig.MailData.TO)
             msg.body = """
             From: %s <%s>
             %s
@@ -55,3 +55,5 @@ def contact():
     elif request.method == 'GET':
         return render_template('contact-us.html', form=form, success=None, page="contact")
         
+if __name__ == "__main__":
+    application.run()
