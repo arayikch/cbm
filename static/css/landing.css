@@ -11,6 +11,7 @@ margin:0;
 padding:0;
 background:#000;
 font-family:"Helvetica Neue",Helvetica, Arial;
+/*background-image: url("/static/images/landing/landing2.jpeg");*/
 }
 
 div#shim{
@@ -33,16 +34,6 @@ top: -140px;
 position: static;
 /** end hack */
 }
-
-/* Hide from IE5mac \*//*/
-div#shim {
-display: none;
-}
-html, body {
-height: auto;
-}
-/* end hack */
-/* ]]> */
 
 
 .logo_box{
@@ -82,14 +73,6 @@ float: left;
 width: 500px;
 height: 95px;
 padding: 25px;
-}
-
-form{
-width: 590px;
-padding: 10px 0;
-float: left;
-background: url(../images/dots.gif) right top repeat-y;
-height: 80px;
 }
 
 h2{
@@ -132,7 +115,7 @@ margin: 0;
 ul.info li p.social a.tw{
 width: 28px;
 height: 28px;
-background: url(../images/social.png) left top no-repeat;
+background: url("/static/images/landing/social.png") left top no-repeat;
 margin-right: 8px;
 float: left;
 }
@@ -140,7 +123,7 @@ float: left;
 ul.info li p.social a.fb{
 width: 28px;
 height: 28px;
-background: url(../images/social.png) -36px top no-repeat;
+background: url("/static/images/landing/social.png") -36px top no-repeat;
 float: left;
 margin-right: 8px;
 }
@@ -148,65 +131,28 @@ margin-right: 8px;
 ul.info li p.social a.li{
 width: 28px;
 height: 28px;
-background: url(../images/social.png) -72px top no-repeat;
+background: url("/static/images/landing/social.png") -72px top no-repeat;
 float: left;
 }
 
 ul.info li p.social a.tw:hover{
 width: 28px;
 height: 28px;
-background: url(../images/social.png) left bottom no-repeat;
+background: url("/static/images/landing/social.png") left bottom no-repeat;
 float: left;
 }
 
 ul.info li p.social a.fb:hover{
 width: 28px;
 height: 28px;
-background: url(../images/social.png) -36px bottom no-repeat;
+background: url("/static/images/landing/social.png") -36px bottom no-repeat;
 float: left;
 }
 
 ul.info li p.social a.li:hover{
 width: 28px;
 height: 28px;
-background: url(../images/social.png) -72px bottom no-repeat;
+background: url("/static/images/landing/social.png") -72px bottom no-repeat;
 float: left;
-}
-
-
-
-.field{
-float: left;
-background: url(../images/input.png) left top no-repeat;
-width: 425px;
-height: 21px;
-font-size: 14px;
-color: #666;
-padding: 10px;
-border: none;
-}
-
-.submit_butt{
-float: left;
-background: url(../images/input.png) right top no-repeat;
-width: 109px;
-height: 41px;
-border: none;
-cursor: pointer;
-}
-
-.submit_butt:hover{
-background: url(../images/input.png) right bottom no-repeat;
-}
-
-.connect{
-width: 145px;
-padding-left: 20px;
-float: left;
-padding-top: 20px;
-}
-
-.connect img{
-margin-right: 5px;
 }
 
