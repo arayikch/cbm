@@ -13,7 +13,8 @@ mail.init_app(application)
 
 @application.route('/')
 def index():
-	return redirect(url_for('home'))
+	#return redirect(url_for('home'))
+    return render_template('landing.html', page='landing')
 
 @application.route('/home')
 def home():
