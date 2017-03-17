@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, flash, redirect, url_for
 from forms import ContactForm
 from flask_mail import Message, Mail
-import apapppconfig
+import appconfig
 
 application = Flask(__name__) 
  
